@@ -10,43 +10,43 @@ export const Product =[
     {
         productName: "camera",
         ProductImage: camera,
-        prise: "1000$",
+        price: "1000$",
         id: 1
     },
      {
         productName: "dasti",
         ProductImage: dasti,
-        prise: "2000$",
+        price: "2000$",
         id: 2
     },
      {
         productName: "dorbin",
         ProductImage: dorbin,
-        prise: "3000$",
+        price: "3000$",
         id: 3
     },
      {
         productName: "images",
         ProductImage: images,
-        prise: "4000$",
+        price: "4000$",
         id: 4
     },
      {
         productName: "IPC",
         ProductImage: IPC,
-        prise: "5000$",
+        price: "5000$",
         id: 5
     },
      {
         productName: "lightbox",
         ProductImage: lightbox,
-        prise: "6000$",
+        price: "6000$",
         id: 6
     },
      {
         productName: "phone",
         ProductImage: Phone,
-        prise: "7000$",
+        price: "7000$",
         id: 7
     }
 ]
