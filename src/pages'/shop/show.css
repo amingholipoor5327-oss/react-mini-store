@@ -8,7 +8,7 @@
 .products-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 25px;
+  gap: 50px;
   justify-content: center;
   padding: 30px;
 }
@@ -101,6 +101,7 @@
 .counter span {
   font-size: 16px;
   font-weight: bold;
+  color: #0442a0;
   min-width: 22px;
   text-align: center;
 }
