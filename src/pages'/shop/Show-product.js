@@ -1,23 +1,14 @@
-import { useState } from "react";
-import "./show.css";
-
+import { useContext } from "react";
+import { Shopcontext } from "../../component/context/usecontext";
+import "./show.css"
 export const Showproduct = ({ data }) => {
   const { productName, ProductImage, price, id } = data;
+  const { cartItem, decrease, increase } = useContext(Shopcontext)
 
-  const [count, setCount] = useState(0);
-
-   const increase = () => {
-    setCount(prev => prev + 1);
-  };
-
-   const decrease = () => {
-    if (count > 0) {
-      setCount(prev => prev - 1);
-    }
-  };
+  const item = cartItem.find(row => row.id === id);
 
   return (
-    <div className="product-card" key={id}>
+    <div className="product-card">
       <img src={ProductImage} alt={productName} />
 
       <h3 className="product-title">{productName}</h3>
@@ -25,11 +16,11 @@ export const Showproduct = ({ data }) => {
       <p className="product-price">${price}</p>
 
       <div className="counter">
-        <button onClick={decrease}>-</button>
+        <button onClick={() => decrease(id)}>-</button>
 
-        <span>{count}</span>
+        <span>{item?.count || 0}</span>
 
-        <button onClick={increase}>+</button>
+        <button onClick={() => increase(id)}>+</button>
       </div>
     </div>
   );

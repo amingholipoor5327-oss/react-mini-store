@@ -4,8 +4,8 @@ import "./show.css"
 export const Shop= ()=>{
     return (
         <div className="products-container">  
-              {Product.map((datalist)=>{
-            return <Showproduct  data={datalist}/>
+              {Product.map((datalist  , index)=>{
+            return <Showproduct  data={datalist} key={index}/>
         })}
         </div>
     
