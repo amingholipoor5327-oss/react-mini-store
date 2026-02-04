@@ -1,12 +1,36 @@
-export const Showproduct = (props)=>{
-const {productName , ProductImage , price, id } = props.data;
-return(<React.Fragment>
-    <img src={ProductImage}/>
-    <h1>{productName}</h1>
-    <h5>{price}</h5>
+import { useState } from "react";
+import "./show.css";
 
-    <button>+</button>
-    <span>0</span>
-    <button>-</button>
-</React.Fragment>)
-}
+export const Showproduct = ({ data }) => {
+  const { productName, ProductImage, price, id } = data;
+
+  const [count, setCount] = useState(0);
+
+   const increase = () => {
+    setCount(prev => prev + 1);
+  };
+
+   const decrease = () => {
+    if (count > 0) {
+      setCount(prev => prev - 1);
+    }
+  };
+
+  return (
+    <div className="product-card" key={id}>
+      <img src={ProductImage} alt={productName} />
+
+      <h3 className="product-title">{productName}</h3>
+
+      <p className="product-price">${price}</p>
+
+      <div className="counter">
+        <button onClick={decrease}>-</button>
+
+        <span>{count}</span>
+
+        <button onClick={increase}>+</button>
+      </div>
+    </div>
+  );
+};

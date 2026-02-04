@@ -1,12 +1,13 @@
 import { Product } from "../../data/Product"
 import { Showproduct } from "./Show-product"
-import React from "react"
-
+import "./show.css"
 export const Shop= ()=>{
     return (
-    <React.Fragment>
-        {Product.map((datalist)=>{
+        <div className="products-container">  
+              {Product.map((datalist)=>{
             return <Showproduct  data={datalist}/>
         })}
-     </React.Fragment>)
+        </div>
+    
+      )
 }
