@@ -2,11 +2,13 @@ import "./App.css";
 import {BrowserRouter as  Router , Routes , Route} from "react-router-dom"
 import { Shop } from "./pages'/shop/shop";
 import { Cart } from "./pages'/cart/cart";
-import { Nav } from "./component/navigation";
+import { Nav } from "./component/nav/navigation";
+import { Shopprovider } from "./component/context/usecontext";
  function App() {
   
    return (
     <div className="App">
+      <Shopprovider>
       <Router>
         <Nav/>
         <Routes>
@@ -14,6 +16,7 @@ import { Nav } from "./component/navigation";
           <Route path="/cart" element={<Cart/>}></Route>
         </Routes>
       </Router>
+      </Shopprovider>
     </div>
   );
 }
