@@ -1,5 +1,5 @@
 import React, { useContext } from "react"
-import { Shopcontext } from "../../component/context/usecontext"
+import { Shopcontext } from "../../component/coustom-hooks/usecontext"
 import {Product } from "../../data/Product"
 import { Showproduct } from "../shop/Show-product"
 import "../shop/show.css"

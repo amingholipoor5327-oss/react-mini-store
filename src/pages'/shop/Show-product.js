@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Shopcontext } from "../../component/context/usecontext";
+import { Shopcontext } from "../../component/coustom-hooks/usecontext";
 import "./show.css"
 export const Showproduct = ({ data }) => {
   const { productName, ProductImage, price, id } = data;
