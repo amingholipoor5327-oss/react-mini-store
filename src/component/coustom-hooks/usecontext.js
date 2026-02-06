@@ -4,7 +4,7 @@ import { useCart } from "./usecart"
 export const Shopcontext= createContext({
     decrease:()=>{} ,
     increase: ()=>{} ,
-    cartItem:  [] , 
+    cartItem:   [] , 
 })
 export const ShopProvider =(props)=>{
 

@@ -5,7 +5,7 @@ export const Showproduct = ({ data }) => {
   const { productName, ProductImage, price, id } = data;
   const { cartItem, decrease, increase } = useContext(Shopcontext)
 
-  const item = cartItem.find(row => row.id === id);
+  const item = cartItem?.find(row => row.id === id);
 
   return (
     <div className="product-card">

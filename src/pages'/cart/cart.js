@@ -10,8 +10,8 @@ export const Cart= ()=>{
         <h1> this is cart page</h1>
         <div className="products-container"> 
 
-            {Product.map((p)=>{
-            if(cartItem.some((I)=> I.id===p.id && I.count>0))
+            {Product?.map((p)=>{
+            if(cartItem?.some((I)=> I.id===p.id && I.count>0))
                 return <Showproduct data={p}/>
         })}
         
