@@ -1,0 +1,42 @@
+ /* وسط چین زیر navbar */
+.welcome-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+/* کارت */
+.welcome-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+
+  padding: 16px 24px;
+  min-width: 300px;
+
+  background: #4f46e5;
+  color: white;
+
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* دکمه */
+.close-btn {
+  border: none;
+  width: 28px;
+  height: 28px;
+
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  background: #ff4d4d;
+}
